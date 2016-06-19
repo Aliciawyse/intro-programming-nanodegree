@@ -1,1 +1,1 @@
-# intro-rogramming-nanodegree
+# intro-programming-nanodegree
