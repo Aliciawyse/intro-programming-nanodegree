@@ -1,0 +1,17 @@
+header, img {
+	text-align:center;
+}
+
+section {
+	background-color:red;
+	border:2px dotted black;
+	margin:2%;
+	padding:2%;
+	background-color:#ffcc99;
+}
+
+.MainContent {
+	width:60%;
+	margin: auto;
+
+}
