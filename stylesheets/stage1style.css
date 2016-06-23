@@ -1,17 +1,17 @@
-header, img {
-	text-align:center;
+header	{
+	text-align: center;
+	margin-top:2%;
 }
 
 section {
-	background-color:red;
-	border:2px dotted black;
-	margin:2%;
-	padding:2%;
-	background-color:#ffcc99;
+	border: 2px dotted black;
+	padding: 2%;
+	background-color: #fc9;
+	width: 50%;
+	margin: 2% auto;
 }
 
-.MainContent {
-	width:60%;
-	margin: auto;
-
+.title {
+	font-style: italic;
+	text-align: center;
 }
