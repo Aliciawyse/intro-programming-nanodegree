@@ -10,13 +10,16 @@ def play_game(ml_string, parts_of_speech):
     replaced = []
     print "The current paragraph reads as such:\n", ml_string
     ml_string = ml_string.split()
+    count = 0
     for word in ml_string:
         replacement = word_in_pos(word, parts_of_speech)
         if replacement != None:
             user_input = raw_input("\nType in your guess for " + replacement + ": ")
             word = word.replace(replacement, user_input)
             replaced.append(" " + word)
-            print "\nThe current paragraph reads as such:\n", "".join(replaced)," ".join(ml_string[len(replaced):])
+            count = count + 1
+            if count != 4:
+                print "\nThe current paragraph reads as such:\n", "".join(replaced)," ".join(ml_string[len(replaced):])
         else:
             replaced.append(" " + word)
     replaced = "".join(replaced)
