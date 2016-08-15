@@ -16,8 +16,9 @@ def play_game(ml_string, parts_of_speech):
             user_input = raw_input("\nType in your guess for " + replacement + ": ")
             word = word.replace(replacement, user_input)
             replaced.append(" " + word)
-            index = len(" ".join(replaced))
-            print "\nThe current paragraph reads as such:\n", " ".join(replaced), " ".join(ml_string[index:])
+            index = int(len(" ".join(replaced)))
+            new_string = "".join(ml_string)
+            print "\nThe current paragraph reads as such:\n", " ".join(replaced),new_string[index:]
         else:
             replaced.append(" " + word)
     replaced = "".join(replaced)
