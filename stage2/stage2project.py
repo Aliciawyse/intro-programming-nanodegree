@@ -1,4 +1,4 @@
-#Define functions once at the top of this script.
+#Define functions once at the top of this script
 
 def word_in_pos(word, parts_of_speech):
     for pos in parts_of_speech:
@@ -8,15 +8,16 @@ def word_in_pos(word, parts_of_speech):
     
 def play_game(ml_string, parts_of_speech):    
     replaced = []
-    print ml_string
+    print "The current paragraph reads as such:\n", ml_string
     ml_string = ml_string.split()
     for word in ml_string:
         replacement = word_in_pos(word, parts_of_speech)
         if replacement != None:
-            user_input = raw_input("Type in your guess for " + replacement + ": ")
+            user_input = raw_input("\nType in your guess for " + replacement + ": ")
             word = word.replace(replacement, user_input)
             replaced.append(" " + word)
-            print replaced
+            index = len(" ".join(replaced))
+            print "\nThe current paragraph reads as such:\n", " ".join(replaced), " ".join(ml_string[index:])
         else:
             replaced.append(" " + word)
     replaced = "".join(replaced)
