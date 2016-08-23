@@ -1,10 +1,27 @@
-#Define functions once at the top of this script
+#Define functions once, at the top of this script
+
+#This function has two inputs, word & parts_of_speech. 
+#Parts_of_speech is a list. It contains words we want to replace.
+#Word is a string that will contain a substring from the parts_of_speech list.
+#If there is an element in parts_of_speech list that is in the word, then return that parts_of_speech element, else return None. 
+#We use this function in our madlibs game/the play_game function.
 
 def word_in_pos(word, parts_of_speech):
     for pos in parts_of_speech:
         if pos in word:
             return pos
     return None
+    
+#This function has two inputs, ml_string and parts_of_speech. Ml_string is a string that contains replacement words found in parts_of_speech. Parts_of_speech is a list of replacement words. We create an empty list called replaced. It well be used to construct an updated madlib.
+
+#We convert ml_string into a list. Using a for loop we can traverse ml_string. 
+
+#The for loop tells the computer, for each element in ml_string: 1)Create a variable called replacement to hold the result of the function above when we pass through an element from ml_string. 2)If the result is NONE append the element from ml_string that we're currently dealing with to the empty list replaced, but if the result is NOT none, ask the user to make a guess. Then take the element from ml-string that we're currently dealing with and replace it with the user's input. Afterwards, append our updated ml_string element to the empty list called replaced. 
+
+#Once we exit the for loop, we turn our list called replace into a string using pythons built-in join method. Then we return replaced. 
+
+& the function about, we can check if (any part of) the current iteration of ml_string is in parts_of_speech. If it is, we replace the word with the users input and add it to an empty list called replaced. 
+    
     
 def play_game(ml_string, parts_of_speech):    
     replaced = []
