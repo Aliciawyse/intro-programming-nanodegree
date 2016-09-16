@@ -40,5 +40,8 @@ draw_square_and_circle()
 
 #What is a class and an instance?
 
-#A class is like a blueprint of a building. It contains certain info about the building. 
+#A class is like a blueprint of a building. It contains the information about the nuts and bolts about the building. (height, number of rooms) It can be used for different types of "buildings" such as an office building or residential building.
+
 #We can use this blueprint and create diff examples of it.
+
+#A class turtle, like a blueprint, contains info about the size, color, turn right, left. From this class, we can create multiple instances of it. 
