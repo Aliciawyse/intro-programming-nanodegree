@@ -1,0 +1,93 @@
+body {
+    background-color: pink;
+    margin:4%;
+    display:table;
+}
+
+header {
+    background-color: rgba(255,0,0,0.3); /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, purple , red); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(left, purple, red); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(left, purple, red); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(141deg, #b80f3e 0%, #db1fcd 51%, #982ce8 75%);
+    color: white;
+    text-align: center;
+    font-size: 150%;
+    font-variant: normal;
+    font-family: arial, "Times New Roman";
+    padding: 1px;
+    display:table-row;
+    width: 100%;
+}
+
+
+
+section {
+    margin-top:2%;
+    color: orange;
+    background-color:white;
+    font-family: Arial;
+    font-style: italic;
+    display: table;
+    padding:3%;
+    border:2px solid black;
+    border-spacing:10px;
+    
+}
+
+.description {
+    display: table-cell;
+    border: 1px dotted black;
+    padding:2%;
+    width:40%;
+    overflow: scroll;
+}
+
+
+.animate {
+    -webkit-transition:-webkit-transform 3s;
+    
+    
+}
+
+.animate:hover{
+    transform: rotate(360deg);
+    -ms-transform: rotate(360deg); /* IE 9 */
+    -webkit-transform: rotate(360deg); /* Chrome, Safari, Opera */
+}
+
+
+
+/*This is a child selector; it's more specific as the p element must be a child of footer, no intermediate tags such as link tags will be considered.*/
+footer > p {
+    background-color: rgba(255,0,0,0.3);
+    color:blue;
+    text-align: center;
+    font-size: 150%;
+    font-variant: normal;
+    font-family: arial, "Times New Roman";
+    clear: both;
+}
+
+/*This is a descendant selector. It will style all anchor tags inside the nav tag.*/
+footer a {
+    font-weight: bold;
+    
+}
+
+a:hover {
+    background: blue;
+    color:white;
+}
+
+/* This is for people who tab through the page*/
+a:focus {
+    background: blue;
+    color:white;
+}
+
+/*Operators can be used to find attribute values*/
+
+img[src$=".JPG"] {
+    height: 30%;
+}

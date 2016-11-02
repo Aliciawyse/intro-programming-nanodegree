@@ -1,5 +1,5 @@
-#Project Specification for the stage 1 of the Udacity Introduction to Programming Nanodegree
+#Udacity Introduction to Programming Nanodegree: Stage One Project
 
-This is an <a href="http://codepen.io/AndyAtUdacity/pen/KweNKa?editors=110"></a> example submission that would meet specifications.
+This is an <a href="http://codepen.io/AndyAtUdacity/pen/KweNKa?editors=110">example submission</a> that would meet specifications. Here is a snapshot of the grading rubric. 
 
-Here is a snapshot of the grading rubric. <img src="rubric.png" alt="grading rubric"> 
+<img src="rubric.png" alt="grading rubric"> 

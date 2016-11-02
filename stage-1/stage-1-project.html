@@ -4,21 +4,24 @@
 <head>
 	<meta charset="utf-8">
 	<title>Major Takeaways from Stage One</title>
-	<link rel="stylesheet" href="project.css">
+	<link rel="stylesheet" href="css/project.css">
 	<style>
 		p {
-			color:purple;
+			color:purple; /*This color has precedence.*/
 		}
 	</style>
 </head>
 
 <body>
-<h1 style="color:blue">Major Takeaways from Stage One</h1>
-
-	<div>
+	
+<header><h1>Major Takeaways from Stage One</h1>
+</header>
+	<section id="html-description" > 
+		
+		<div class="description">
+		<img src="images/infastructure.JPG" alt="building structure" class="animate">
 		<h2>History and Evolution of HTML</h2>
 		<p>HTML stands for Hypertext Markup Language. Markup Languages are not the same as programming languages, they use tags to annotate documents. HTML1 was created in 1990. In 1993, Mosaic emerged as the first graphical browser. As time went on, more browsers were created. Some had their unique tags. Eventually, web standards were developed. Today, browsers continue to adopt new standards.</p>
-		<p></p>
 		
 		<h2>How HTML Works</h2>
 		<p>The internet is made up of local area networks. Multiple local area networks that are connected together are called wide area networks. There are client and server relationships on the network. Servers are machines that hold chared resources. Clients are our computers. The request response cycle is what happens when you, the client, request a page or a service from a server.</p>
@@ -26,28 +29,24 @@
 		
 		<h2>HTML Tools and Tips</h2>
 		<p>Uses dashes, not uderscores in your file names. Trouble-shooting is normal. It's often necessary to refresh your page. Create folders for your files and name your files carefully. You can use Sublime, TextEdit and Notepad (and many other text editors)to create your webpage.</p>
-	</div>
-	
-	<div>
+		</div>
+		
+		<div class="description">
+		<img src="images/css.JPG" height=300 width=260 alt="cathedral" class="animate">
 		<h2>Cascading Style Sheets</h2>
 		<p>Webpages look plain by default, but you can add style. You can style attributes to HTML tags directly. However, it's convention to separate content from style. So, we use a Cascading Style Sheet - a way for you to write rules on how to style your html.</p>
 		
 		<p>Typically, when you write CSS you first, identify the tag you want to style, aka your selector. Once you define what tag you want to change, you can say what about that selector you'd like to change, aka its property (color, background color). Afterwards, you can give the property a value. Altogether, you can say, whenever you see an h1 element change its color to blue. Note, the most recent rule has precedence, but htis can be overwritten if you choose.</p>
-		<p> </p>
 
-		<h2></h2>
-		<p></p>
+		<h2>Colors</h2>
+		<p>You can identify colors by simply using the english word. Or, hexadecimal. It includes the use of numbers and letters: 0-9 and a-f. Use a pound sign followed by three or six digits. There's also rgb. You use numbers between 0-1. There's another option for rgba. The "a" stands for alpha transparency, it can make your color a bit see through. Use color appropriately and don't use it alone to convey meaning such as caption or alternate text. Think about color contrast. Use webaim contrast checker to determine if your page color contrast is appropriate.</p>
+		</div>
 		
-		<p></p>
-		
-		<h2></h2>
-		<p></p>
-		
-	</div>
+	</section>
 	
-	<div>
-		<p>Sources: Udacity and Coursera's Web Design is for Everybody</p>
-	</div>
+	<footer>
+		<p>Sources: <a href="https://www.udacity.com">Udacity's</a> introduction to programming nanodegree and <a href="https://www.coursera.org">Coursera's</a> web design specialization</p>
+	</footer>
 	
 </body>
 
