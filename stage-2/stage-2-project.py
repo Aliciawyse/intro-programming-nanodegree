@@ -43,7 +43,7 @@ def play_game(ml_string, parts_of_speech):
             #and stick it in the word variable
             word = word.replace(replacement, user_input)
             
-            if word not in easy_answers:
+            if word not in answers:
                 print "That's incorrect. Give it another shot!"
                 break
             
@@ -87,7 +87,7 @@ while choice == "easy":
     
     ml_string = """I pledge allegiance to the __1__ of the United States of __2__, and to the republic for which it stands, one nation under God, __3__, with liberty and __4__ for all."""  
         
-    easy_answers = ["flag", "America", "indivisible", "justice"]
+    answers = ["flag", "America", "indivisible", "justice"]
 
     
     print play_game(ml_string, parts_of_speech)
@@ -96,16 +96,20 @@ while choice == "easy":
 while choice == "medium":
     print "Medium level - here we go!\n"
         
-    ml_string = """That's one small __1__ for __2__, one __3__ giant step for __4__."""
+    ml_string = """That's one small __1__ for __2__, one __3__ leap for __4__."""
     
+    answers = ["step", "man", "giant", "mankind"]
+
     print play_game(ml_string, parts_of_speech)
     break
 
 while choice == "hard":
     print "Hard level - here we go!\n"
         
-    ml_string = """Give a man a __1__ and you __2__ him for a day; __4__ a man to fish and you feed him for a __5__."""
+    ml_string = """Hello __1__."""
     
+    answers = ["world"]
+
     print play_game(ml_string, parts_of_speech)
     break
 
