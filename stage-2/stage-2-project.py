@@ -1,25 +1,23 @@
-#This function has two inputs, word & parts_of_speech. 
-#Word is a list. We will check if an index in the Word list matches an index in the parts_of_speech list.
-#The parts_of_speech list contains words we have a special interest in tracking. 
-
-#If there is a word in the parts_of_speech list that matches in word in the Words list, 
-#then return that parts_of_speech word. If not, return None.
+#Our word_in_pos function takes in a string (word) and a list (parts_of_speech).
+#If there is a word in parts_of_speech that is a substring of the string word -- return that word, else return none.
 
 def word_in_pos(word, parts_of_speech):
-    for pos in parts_of_speech:
-        if pos in word:
-            return pos
-    return None
+    for item in parts_of_speech:
+        if item in word: 
+            return word
+        #return none outside of the for loop since we want to first compare word to every word in parts_of_speech
+        return None 
+    
+#Our play_game function has two inputs.
+#parts_of_speech which is a list of acceptable replacement words and ml_string is a string which can contain replacement words found in parts_of_speech.
+#The words in ml_string that we want to replace with user input are "__1__", "__2__", "__3__", "__4__"
 
-#Our play_game function has two inputs. 
-#Our madlib paragraph is in the variable ml_string.
-#The parts_of_speech list contains words we have a special interest in tracking. 
 def play_game(ml_string, parts_of_speech):  
     
     #Show user what the paragraph looks like. 
     print "The current paragraph reads as such:\n", ml_string
     
-    #Convert string into a list.
+    #Convert ml_string into a list.
     ml_string = ml_string.split()
     
     #Use an iterative variable since the user can only make limited amount of guesses.
@@ -28,14 +26,11 @@ def play_game(ml_string, parts_of_speech):
     #Create an empty string that will be used to build out the updated madlib.
     replaced = []
     
-    #For each element in ml_string
     for word in ml_string:
-        #Plug it into our word_in_pos function. 
-        #Does it match a word in the parts_of_speech list?
-        #If yes, return that word & put it in the replacement variable. If not, return None.
         replacement = word_in_pos(word, parts_of_speech)
         
         if replacement != None:
+            
             #Prompt user to make a guess.
             user_input = raw_input("\nType in your guess for " + replacement + ": ")
             
@@ -45,7 +40,7 @@ def play_game(ml_string, parts_of_speech):
             
             if word not in answers:
                 print "That's incorrect. Give it another shot!"
-                break
+                continue
             
             #Append a space and the word to the empty list
             replaced.append(" " + word)
@@ -63,6 +58,7 @@ def play_game(ml_string, parts_of_speech):
         else:
             replaced.append(" " + word)
     
+    #replaced has the same structure as ml_string only that the replacement words are swapped with user input
     replaced = "".join(replaced)
     return replaced
 
