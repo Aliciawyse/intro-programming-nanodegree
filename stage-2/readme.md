@@ -1,6 +1,6 @@
 #Udacity Introduction to Programming Nanodegree: Stage Two Project
 
-This reverce madlib game has three levels and each level has four. When the program runs, the user is prompted to select a difficulty level (easy, medium or hard). Once a level is selected, the program displays a fill-in-the-blank paragraph, and the user is prompted to take a guess.
+This reverse madlib game has three levels. Each level has blanks for the user to guess. At first, the user is prompted to select a difficulty level (easy, medium or hard). Once a level is selected, the program displays a fill-in-the-blank paragraph, and the user is prompted to take a guess at each blank.
 
 When the user guesses corrrectly, the blank space is updated. Afterwards, the program will ask the user for input for the next blank space. If the user guesses incorrectly, he or she is prompted to try again. 
 
